@@ -64,7 +64,7 @@ while (!exitProgram) {
         else if (choice == 3) {
             var pName = readlineSync.question("Enter pizza to remove from collection: ");
             var result = pizs.RemovePizza(pName);
-            if (result == null) {
+            if (!result) {
                 console.log("Sorry '"+pName+"' doesn't exist or collection is empty");
             }
             else {
@@ -77,7 +77,7 @@ while (!exitProgram) {
     }
         //if choice = 4 exit program
     if (exitProgram) {
-        console.log("End program");
+        console.log("End program, see you later :-)");
         break;
     }
 }
